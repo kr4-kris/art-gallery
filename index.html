@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кристина Кравченко - Художник</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Dancing+Script:wght@400;600;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Кристина Кравченко</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#gallery" class="nav-link">Галерея</a></li>
+                <li><a href="#about" class="nav-link">О себе</a></li>
+                <li><a href="#contacts" class="nav-link">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <!-- Hero background image will be set via CSS -->
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Художник<br>Кристина Кравченко</h1>
+                <p class="hero-subtitle handwritten">Интуитивная живопись.<br>Поток. Эмоции.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">О себе</h2>
+                    <div class="about-description handwritten">
+                        <p>Я рисую, чтобы услышать себя. Каждая работа — отражение внутреннего мира.</p>
+                        <p class="artist-signature">Художник Кристина Кравченко.</p>
+                        <p class="artist-note">Спасибо, что смотрите мои картины</p>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="{{ url_for('static', filename='images/artist-workspace.jpg') }}" alt="Творческий процесс" class="workspace-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title center">Галерея работ</h2>
+            <div class="gallery-grid">
+                <!-- Ваши настоящие работы -->
+                <div class="gallery-item" onclick="openModal('{{ url_for('static', filename='images/artwork1.jpg') }}', 'Зеленая мандала', 'Концентрические круги зеленого цвета создают медитативное пространство. Эта работа о поиске внутреннего равновесия и гармонии с природой.')">
+                    <img src="{{ url_for('static', filename='images/artwork1.jpg') }}" alt="Зеленая мандала">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('{{ url_for('static', filename='images/artwork2.jpg') }}', 'Эмоциональные очки', 'Взгляд через призму эмоций. Красные и белые пятна символизируют различные состояния души, видимые только тому, кто готов их увидеть.')">
+                    <img src="{{ url_for('static', filename='images/artwork2.jpg') }}" alt="Эмоциональные очки">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('{{ url_for('static', filename='images/artwork5.jpg') }}', 'Центр вселенной', 'Синий глаз в центре композиции наблюдает за потоками энергии. Работа о том, как мы воспринимаем мир и как мир воспринимает нас.')">
+                    <img src="{{ url_for('static', filename='images/artwork5.jpg') }}" alt="Центр вселенной">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('{{ url_for('static', filename='images/artwork9.jpg') }}', 'Баланс янь и ян', 'Противоположности в единстве. Черное и белое переплетаются в вечном танце, создавая гармонию из контрастов.')">
+                    <img src="{{ url_for('static', filename='images/artwork9.jpg') }}" alt="Баланс янь и ян">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('{{ url_for('static', filename='images/artwork8.jpg') }}', 'Солнечные лучи', 'Золотистые линии расходятся от центра, как лучи солнца. Эта работа о внутреннем свете, который есть в каждом из нас.')">
+                    <img src="{{ url_for('static', filename='images/artwork8.jpg') }}" alt="Солнечные лучи">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                
+                
+                <div class="gallery-item" onclick="openModal('{{ url_for('static', filename='images/artwork3.jpg') }}', 'Вихрь энергии', 'Золотые и красные потоки краски создают космический вихрь. Эта работа о моментах, когда творческая энергия захватывает полностью и ведет за собой.')">
+                    <img src="{{ url_for('static', filename='images/artwork3.jpg') }}" alt="Вихрь энергии">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('{{ url_for('static', filename='images/artwork4.jpg') }}', 'Глубина материи', 'Плотные слои краски создают богатую текстуру. Каждый мазок - это след времени, каждый цвет - отпечаток эмоции, застывшей в материи.')">
+                    <img src="{{ url_for('static', filename='images/artwork4.jpg') }}" alt="Глубина материи">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('{{ url_for('static', filename='images/artwork7.jpg') }}', 'Цветение на холсте', 'Нежные розовые и зеленые оттенки переплетаются на текстурной поверхности. Работа о том, как красота может расцвести даже в самых неожиданных местах.')">
+                    <img src="{{ url_for('static', filename='images/artwork7.jpg') }}?v={{ range(1000, 9999) | random }}" alt="Цветение на холсте">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('{{ url_for('static', filename='images/artwork11.jpg') }}', 'Розовый водоворот', 'Центральный овальный вихрь окружен красными и розовыми тонами. Эта работа исследует движение энергии и то, как эмоции закручиваются в спирали внутри нас.')">
+                    <img src="{{ url_for('static', filename='images/artwork11.jpg') }}" alt="Розовый водоворот">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('{{ url_for('static', filename='images/artwork12.jpg') }}', 'Поток времени', 'Светлые формы стекают по розовому фону, создавая ощущение непрерывного движения. Работа о том, как время течет через нас, оставляя следы.')">
+                    <img src="{{ url_for('static', filename='images/artwork12.jpg') }}" alt="Поток времени">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('{{ url_for('static', filename='images/artwork13.jpg') }}', 'Древо жизни', 'Черно-белая композиция с мощным стволом дерева в центре. Работа о корнях, которые уходят глубоко, и ветвях, которые тянутся к небу.')">
+                    <img src="{{ url_for('static', filename='images/artwork13.jpg') }}" alt="Древо жизни">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('{{ url_for('static', filename='images/artwork14.jpg') }}', 'Силуэты памяти', 'Темные фигуры на светлом фоне создают ощущение воспоминаний. Эта работа о том, как образы прошлого остаются с нами в виде теней.')">
+                    <img src="{{ url_for('static', filename='images/artwork14.jpg') }}" alt="Силуэты памяти">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('{{ url_for('static', filename='images/artwork15.jpg') }}', 'Огненное сердце', 'Синие и красные цвета сплетаются в центральной спирали. Работа о страсти, которая горит внутри, о контрасте холода и жара души.')">
+                    <img src="{{ url_for('static', filename='images/artwork15.jpg') }}" alt="Огненное сердце">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('{{ url_for('static', filename='images/artwork16.jpg') }}', 'Синяя медитация', 'Темно-синие тона создают ощущение глубокого спокойствия. Работа о внутреннем мире, где живут наши самые тихие мысли и чувства.')">
+                    <img src="{{ url_for('static', filename='images/artwork16.jpg') }}" alt="Синяя медитация">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('{{ url_for('static', filename='images/artwork17.jpg') }}', 'Связь душ', 'Две светлые фигуры на темном фоне среди цветных точек. Работа о человеческих связях, которые светятся в темноте повседневности.')">
+                    <img src="{{ url_for('static', filename='images/artwork17.jpg') }}" alt="Связь душ">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('{{ url_for('static', filename='images/artwork18.jpg') }}', 'Радужный круг', 'Яркий круг из желтых и зеленых тонов на нежном фоне. Работа о цикличности жизни и том, как все возвращается к своему началу.')">
+                    <img src="{{ url_for('static', filename='images/artwork18.jpg') }}" alt="Радужный круг">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('{{ url_for('static', filename='images/artwork19.jpg') }}', 'Синий космос', 'Фигуры и символы плавают в синем пространстве. Работа о бесконечности внутреннего мира и тех образах, которые живут в глубинах сознания.')">
+                    <img src="{{ url_for('static', filename='images/artwork19.jpg') }}" alt="Синий космос">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('{{ url_for('static', filename='images/artwork20.jpg') }}', 'Зеленый взрыв', 'Энергичные мазки зеленых и красных оттенков создают ощущение движения. Работа о моментах, когда жизненная сила прорывается наружу.')">
+                    <img src="{{ url_for('static', filename='images/artwork20.jpg') }}" alt="Зеленый взрыв">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('{{ url_for('static', filename='images/artwork21.jpg') }}', 'Подводный мир', 'Бирюзовые и зеленые тона создают ощущение погружения. Работа о глубинах души, где скрываются самые сокровенные чувства.')">
+                    <img src="{{ url_for('static', filename='images/artwork21.jpg') }}" alt="Подводный мир">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('{{ url_for('static', filename='images/artwork22.jpg') }}', 'Ночные цветы', 'Красные формы цветов на темном фоне с серебристыми листьями. Работа о красоте, которая расцветает в темноте, о тайных садах души.')">
+                    <img src="{{ url_for('static', filename='images/artwork22.jpg') }}" alt="Ночные цветы">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('{{ url_for('static', filename='images/artwork23.jpg') }}', 'Морская буря', 'Бирюзовые и синие тона с красными акцентами создают ощущение стихии. Работа о внутренних бурях и том, как они меняют нас.')">
+                    <img src="{{ url_for('static', filename='images/artwork23.jpg') }}" alt="Морская буря">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <h2 class="section-title center">Контакты</h2>
+            <div class="contact-info">
+                <p class="contact-text">Свяжитесь со мной для обсуждения работ или сотрудничества</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" title="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="mailto:kristina@example.com" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Gallery -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-caption">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
