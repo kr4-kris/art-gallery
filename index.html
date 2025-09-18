@@ -62,7 +62,19 @@
     </section>
 
     <!-- Gallery Section -->
+
     <section class="gallery" id="gallery">
+    <div class="container">
+        <h2 class="section-title center">Галерея работ</h2>
+        <div class="gallery-grid">
+            <!-- Ваши настоящие работы -->
+            <div class="gallery-item" onclick="openModal('artwork1.jpg', 'Зеленая мандала', 'Концентрические круги зеленого цвета создают медитативное пространство. Эта работа о поиске внутреннего равновесия и гармонии с природой.')">
+                <img src="artwork1.jpg" alt="Зеленая мандала" class="workspace-photo">
+                <div class="gallery-overlay">
+                    <i class="fas fa-expand"></i>
+                </div>
+            </div>
+<!--     <section class="gallery" id="gallery">
         <div class="container">
             <h2 class="section-title center">Галерея работ</h2>
             <div class="gallery-grid">
@@ -73,7 +85,7 @@
                     <div class="gallery-overlay">
         <i class="fas fa-expand"></i>
     </div>
-</div>
+</div> -->
 <!--                 <div class="gallery-item" onclick="openModal('static/artwork1.jpg', 'Зеленая мандала', 'Концентрические круги зеленого цвета создают медитативное пространство. Эта работа о поиске внутреннего равновесия и гармонии с природой.')">
                     <img src="artwork1.jpg" alt="Зеленая мандала" class="workspace-photo">
                     <div class="gallery-overlay">
@@ -259,6 +271,7 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="script.js"></script>
+<!--     <script src="{{ url_for('static', filename='script.js') }}"></script> -->
 </body>
 </html>
