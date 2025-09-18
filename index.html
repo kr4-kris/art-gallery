@@ -67,12 +67,19 @@
             <h2 class="section-title center">Галерея работ</h2>
             <div class="gallery-grid">
                 <!-- Ваши настоящие работы -->
-                <div class="gallery-item" onclick="openModal('static/artwork1.jpg', 'Зеленая мандала', 'Концентрические круги зеленого цвета создают медитативное пространство. Эта работа о поиске внутреннего равновесия и гармонии с природой.')">
+
+                <div class="gallery-item" onclick="openModal('images/artwork1.jpg', 'Зеленая мандала', 'Концентрические круги зеленого цвета создают медитативное пространство. Эта работа о поиске внутреннего равновесия и гармонии с природой.')">
+                    <img src="images/artwork1.jpg" alt="Зеленая мандала" class="workspace-photo">
+                    <div class="gallery-overlay">
+        <i class="fas fa-expand"></i>
+    </div>
+</div>
+<!--                 <div class="gallery-item" onclick="openModal('static/artwork1.jpg', 'Зеленая мандала', 'Концентрические круги зеленого цвета создают медитативное пространство. Эта работа о поиске внутреннего равновесия и гармонии с природой.')">
                     <img src="artwork1.jpg" alt="Зеленая мандала" class="workspace-photo">
                     <div class="gallery-overlay">
                         <i class="fas fa-expand"></i>
                     </div>
-                </div>
+                </div> -->
                 
                 <div class="gallery-item" onclick="openModal('{{ url_for('static', filename='images/artwork2.jpg') }}', 'Эмоциональные очки', 'Взгляд через призму эмоций. Красные и белые пятна символизируют различные состояния души, видимые только тому, кто готов их увидеть.')">
                     <img src="{{ url_for('static', filename='images/artwork2.jpg') }}" alt="Эмоциональные очки">
